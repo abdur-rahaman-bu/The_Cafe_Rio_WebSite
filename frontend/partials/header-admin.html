@@ -1,0 +1,163 @@
+<!-- frontend/partials/header-admin.html -->
+<link
+  rel="stylesheet"
+  href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css"
+/>
+
+<style>
+  .navbar {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  }
+  .nav-link {
+    color: #e9ecef;
+  }
+  .nav-link:hover,
+  .nav-link.active {
+    color: #fff;
+  }
+  .avatar-badge {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0b5ed7;
+    color: #fff;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+  }
+</style>
+
+<header class="sticky-top">
+  <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" id="adminBrand" href="#"
+        ><i class="bi bi-shield-lock-fill me-2"></i> Admin Panel</a
+      >
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#adminNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="adminNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navAdminLeft">
+          <li class="nav-item">
+            <a class="nav-link" data-href="/frontend/pages/admin-dashboard.php"
+              >Dashboard</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-href="/frontend/pages/admin-orders.php"
+              >Orders</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              data-href="/frontend/pages/admin-reservations.php"
+              >Reservations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-href="/frontend/pages/admin-menu.php"
+              >Menu</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-href="/frontend/pages/admin-tables.php"
+              >Tables</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-href="/frontend/pages/admin-reviews.php"
+              >Reviews</a
+            >
+          </li>
+        </ul>
+
+        <div class="dropdown">
+          <button
+            class="btn btn-secondary d-flex align-items-center gap-2 dropdown-toggle"
+            data-bs-toggle="dropdown"
+          >
+            <span class="avatar-badge">A</span><span id="adminName">Admin</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li>
+              <a class="dropdown-item" id="backToSite"
+                ><i class="bi bi-house me-2"></i> Back to Site</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li>
+              <button id="btnLogout" class="dropdown-item text-danger">
+                <i class="bi bi-box-arrow-right me-2"></i> Logout
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<script>
+  (function () {
+    if (!window.APP_BASE) {
+      var p = location.pathname.split("/");
+      var i = p.indexOf("restaurant-app");
+      window.APP_BASE = i >= 0 ? "/" + p.slice(1, i + 1).join("/") : "";
+    }
+  })();
+  function href(el, path) {
+    if (el) el.href = window.APP_BASE + path;
+  }
+  function getUser() {
+    try {
+      return JSON.parse(localStorage.getItem("cr_user") || "null");
+    } catch {
+      return null;
+    }
+  }
+
+  (function guardAndWire() {
+    var u = getUser(),
+      isAdmin = !!(u && (u.role || "").toLowerCase() === "admin");
+    if (!isAdmin) {
+      location.replace(window.APP_BASE + "/index.php?unauthorized=1");
+      return;
+    }
+
+    var badge = document.querySelector(".avatar-badge");
+    if (badge)
+      badge.textContent = (u.name || "A").trim().charAt(0).toUpperCase() || "A";
+    var adm = document.getElementById("adminName");
+    if (adm) adm.textContent = u.name || "Admin";
+
+    href(
+      document.getElementById("adminBrand"),
+      "/frontend/pages/admin-dashboard.php"
+    );
+    document
+      .querySelectorAll("#navAdminLeft a[data-href]")
+      .forEach((a) => href(a, a.getAttribute("data-href")));
+    href(document.getElementById("backToSite"), "/index.php");
+
+    var path = location.pathname.replace(/\/+$/, "");
+    document.querySelectorAll("#navAdminLeft .nav-link").forEach((a) => {
+      var hp = (a.getAttribute("href") || "").replace(/\/+$/, "");
+      a.classList.toggle("active", hp === path);
+    });
+
+    var btnLogout = document.getElementById("btnLogout");
+    if (btnLogout) {
+      btnLogout.addEventListener("click", () => {
+        localStorage.removeItem("cr_user");
+        location.href = window.APP_BASE + "/index.php";
+      });
+    }
+  })();
+</script>

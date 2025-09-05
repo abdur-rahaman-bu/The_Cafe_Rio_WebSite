@@ -1,0 +1,22 @@
+# Disable script execution inside uploads (Apache 2.4)
+<FilesMatch "\.(php[0-9]?|phtml|phar)$">
+  Require all denied
+</FilesMatch>
+
+# Optional: prevent script handlers for common dynamic extensions
+RemoveHandler .php .phtml .php8 .php7 .phar
+
+# Cache static images for a day
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpeg "access plus 1 day"
+  ExpiresByType image/png  "access plus 1 day"
+  ExpiresByType image/webp "access plus 1 day"
+</IfModule>
+
+# Add basic Cache-Control
+<IfModule mod_headers.c>
+  <FilesMatch "\.(jpg|jpeg|png|webp)$">
+    Header set Cache-Control "public, max-age=86400"
+  </FilesMatch>
+</IfModule>

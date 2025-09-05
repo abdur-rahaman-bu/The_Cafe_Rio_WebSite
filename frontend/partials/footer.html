@@ -1,0 +1,59 @@
+<!-- frontend/partials/footer.html -->
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+    <div class="row gy-4">
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">The Cafe Rio – Gulshan</h5>
+        <p class="mb-2">
+          Best buffet in town. Family, friends and celebrations—book and order
+          online.
+        </p>
+        <span class="badge bg-danger">Open Daily</span>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Contact</h5>
+        <ul class="list-unstyled mb-0">
+          <li>Gulshan-1, Dhaka 1212</li>
+          <li class="mt-2">Phone: 01799-437172</li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Hours</h5>
+        <ul class="list-unstyled mb-2">
+          <li>Lunch: 12:30 PM – 3:30 PM</li>
+          <li class="mt-2">Dinner: 6:30 PM – 10:30 PM</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="border-secondary my-4" />
+    <div
+      class="d-flex flex-column flex-md-row justify-content-between align-items-center"
+    >
+      <p class="mb-0">
+        &copy;
+        <?php echo date("Y"); ?>
+        The Cafe Rio – Gulshan.
+      </p>
+      <p class="mb-0">Designed by Your Team</p>
+    </div>
+  </div>
+</footer>
+
+<link
+  rel="stylesheet"
+  href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap-icons.css"
+/>
+<script
+  src="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.bundle.min.js"
+  defer
+></script>
+
+<script>
+  (function(){
+    var PH = (typeof APP_BASE === 'string' ? APP_BASE : '') + '/frontend/assets/images/_placeholder.png';
+    function applyFallback(img){ if (img && !img.dataset.fallbackApplied){ img.dataset.fallbackApplied='1'; img.src=PH; } }
+    function wire(img){ if (!img || img.dataset.fallbackWired) return; img.dataset.fallbackWired='1'; img.addEventListener('error', ()=> applyFallback(img)); }
+    function init(){ document.querySelectorAll('img').forEach(wire); if ('MutationObserver' in window){ new MutationObserver(muts=> muts.forEach(m=>{ m.addedNodes.forEach(n=>{ if (n && n.tagName==='IMG') wire(n); else if (n && n.querySelectorAll) n.querySelectorAll('img').forEach(wire); }); }))).observe(document.documentElement,{childList:true,subtree:true}); } }
+    if (document.readyState==='complete' || document.readyState==='interactive') init(); else window.addEventListener('DOMContentLoaded', init);
+  })();
+</script>
