@@ -120,7 +120,7 @@
 </head>
 <body>
 
-  <?php include __DIR__ . "/frontend/partials/header-user.html"; ?>
+  <?php include __DIR__ . "/frontend/partials/header-index.html"; ?>
 
 
   <div class="heroo position-relative">

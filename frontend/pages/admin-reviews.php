@@ -10,10 +10,45 @@
 
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<!-- Favicon / Tab Logo -->
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
   <style>
-    .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
-    .table td,.table th{ vertical-align: middle; }
-    .mono{ font-family: ui-monospace, Menlo, Consolas, monospace; }
+    .card-elev {
+      border: 0;
+      box-shadow: 0 10px 25px rgba(0,0,0,.06);
+      border-radius: 18px;
+      transition: all 0.3s ease;
+    }
+    .card-elev:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,0,0,.12);
+    }
+
+    .table td,.table th {
+      vertical-align: middle;
+      transition: all 0.2s ease;
+    }
+
+    /* Table row hover effect */
+    .table tbody tr {
+      transition: all 0.25s ease;
+    }
+    .table tbody tr:hover {
+      background-color: #f8f9fa !important;
+      transform: scale(1.01);
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    .mono { font-family: ui-monospace, Menlo, Consolas, monospace; }
+
+    /* Button hover animations */
+    .btn {
+      transition: all 0.25s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+    }
   </style>
 </head>
 <body>
@@ -23,7 +58,9 @@
     <div class="container">
       <div class="d-flex align-items-center justify-content-between mb-3">
         <h1 class="fw-bold">Reviews</h1>
-        <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-arrow-clockwise"></i> Reload</button>
+        <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button">
+          <i class="bi bi-arrow-clockwise"></i> Reload
+        </button>
       </div>
 
       <div id="alert" class="alert d-none" role="alert"></div>

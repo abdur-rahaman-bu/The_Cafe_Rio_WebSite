@@ -9,6 +9,10 @@
   <title>Reserve a Table | The Cafe Rio – Gulshan</title>
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Favicon / Tab Logo -->
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
+
   <style>
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .muted{ color:#6c757d }
@@ -26,88 +30,137 @@
   <?php include __DIR__ . "/../partials/header-user.html"; ?>
 
   <section class="py-5 bg-light">
-    <div class="container">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <h1 class="fw-bold">Reserve Your Table</h1>
-        <a href="/restaurant-app/frontend/pages/my-reservations.php" class="btn btn-outline-secondary btn-sm">
-          <i class="bi bi-journal-text"></i> My Reservations
-        </a>
-      </div>
+  <div class="container">
+    <!-- Header -->
+    <div class="d-flex align-items-center justify-content-between mb-4">
+      <h1 class="fw-bold text-danger">🍽 Reserve Your Table</h1>
+      <a href="/restaurant-app/frontend/pages/my-reservations.php" 
+         class="btn btn-outline-primary btn-sm shadow-sm">
+        <i class="bi bi-journal-text"></i> My Reservations
+      </a>
+    </div>
 
-      <div id="alertBox" class="alert d-none" role="alert"></div>
+    <!-- Alert -->
+    <div id="alertBox" class="alert d-none" role="alert"></div>
 
-      <div class="card-elev mb-4">
-        <div class="card-body p-3 p-md-4">
-          <div id="loginNotice" class="alert alert-warning d-none" role="alert">
-            লগইন করলে User ID অটো-ফিল হবে। <a id="loginLink" class="alert-link" href="#">Login</a>
-          </div>
-          <div class="row g-3">
-            <div class="col-md-3" id="userIdWrap">
-              <label class="form-label">User ID <span class="text-danger">*</span></label>
-              <input id="user_id" type="number" min="1" class="form-control" placeholder="e.g. 2">
-            </div>
-            <div class="col-md-3"><label class="form-label">Date</label><input id="reservation_date" type="date" class="form-control"></div>
-            <div class="col-md-3"><label class="form-label">Time</label><input id="reservation_time" type="time" class="form-control"></div>
-            <div class="col-md-3">
-              <label class="form-label">Duration</label>
-              <select id="duration" class="form-select">
-                <option value="60">60 min</option><option value="90" selected>90 min</option><option value="120">120 min</option><option value="150">150 min</option><option value="180">180 min</option>
-              </select>
-            </div>
-            <div class="col-md-3"><label class="form-label">People</label><input id="people_count" type="number" min="1" value="2" class="form-control"></div>
-            <div class="col-md-3">
-              <label class="form-label">Table Type</label>
-              <select id="table_type" class="form-select">
-                <option value="family" selected>Family</option><option value="couple">Couple</option><option value="window">Window</option>
-              </select>
-            </div>
-            <div class="col-md-6"><label class="form-label">Special Request</label><input id="special_request" class="form-control" placeholder="(optional)"></div>
-            <div class="col-12 d-flex align-items-end gap-2">
-              <button id="btnCheck" class="btn btn-outline-secondary" type="button"><i class="bi bi-search me-1"></i> Check Availability</button>
-              <span id="slotMeta" class="small text-muted"></span>
-            </div>
-          </div>
+    <!-- Reservation Form -->
+    <div class="card shadow-lg border-0 mb-4">
+      <div class="card-body p-4">
+        <div id="loginNotice" class="alert alert-warning d-none mb-3" role="alert">
+          🔑 লগইন করলে User ID অটো-ফিল হবে। 
+          <a id="loginLink" class="alert-link fw-bold text-decoration-underline" href="#">Login</a>
         </div>
-      </div>
 
-      <div class="card-elev">
-        <div class="card-body p-4">
-          <div class="d-flex align-items-center justify-content-between mb-2">
-            <h5 class="fw-bold mb-0">All Tables</h5>
-            <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-arrow-clockwise"></i></button>
+        <div class="row g-3">
+          <div class="col-md-3" id="userIdWrap">
+            <label class="form-label fw-semibold">User ID <span class="text-danger">*</span></label>
+            <input id="user_id" type="number" min="1" class="form-control border-primary shadow-sm" placeholder="e.g. 2">
           </div>
-          <div id="gridAlert" class="alert d-none" role="alert"></div>
-          <div id="tablesGrid" class="tbl-grid"></div>
-          <input type="hidden" id="table_id">
-          <div class="d-flex align-items-center gap-3 mt-3">
-            <button id="btnReserve" class="btn btn-danger" type="button" disabled>
-              <span id="btnSpin" class="spinner-border spinner-border-sm me-2 d-none"></span>
-              Reserve
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Date</label>
+            <input id="reservation_date" type="date" class="form-control border-success shadow-sm">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Time</label>
+            <input id="reservation_time" type="time" class="form-control border-success shadow-sm">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Duration</label>
+            <select id="duration" class="form-select border-info shadow-sm">
+              <option value="60">60 min</option>
+              <option value="90" selected>90 min</option>
+              <option value="120">120 min</option>
+              <option value="150">150 min</option>
+              <option value="180">180 min</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">People</label>
+            <input id="people_count" type="number" min="1" value="2" class="form-control border-warning shadow-sm">
+          </div>
+          <div class="col-md-3">
+            <label class="form-label fw-semibold">Table Type</label>
+            <select id="table_type" class="form-select border-danger shadow-sm">
+              <option value="family" selected>Family</option>
+              <option value="couple">Couple</option>
+              <option value="window">Window</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Special Request</label>
+            <input id="special_request" class="form-control border-secondary shadow-sm" placeholder="(optional)">
+          </div>
+          <div class="col-12 d-flex align-items-end gap-2">
+            <button id="btnCheck" class="btn btn-outline-success shadow-sm" type="button">
+              <i class="bi bi-search me-1"></i> Check Availability
             </button>
-            <button id="btnReset" class="btn btn-outline-secondary" type="button">Reset</button>
+            <span id="slotMeta" class="small text-muted"></span>
           </div>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Success Modal -->
-  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content border-0">
-        <div class="modal-header border-0">
-          <h5 class="modal-title text-success"><i class="bi bi-check2-circle me-2"></i>Reservation confirmed</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+    <!-- Table Grid -->
+    <div class="card shadow-lg border-0">
+      <div class="card-body p-4">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+          <h5 class="fw-bold text-dark mb-0">📋 All Tables</h5>
+          <button id="btnReload" class="btn btn-outline-info btn-sm shadow-sm" type="button">
+            <i class="bi bi-arrow-clockwise"></i> Reload
+          </button>
         </div>
-        <div class="modal-body">
-          <div id="okMeta" class="small text-muted">—</div>
-        </div>
-        <div class="modal-footer border-0">
-          <a class="btn btn-danger" href="/restaurant-app/frontend/pages/my-reservations.php">My Reservations</a>
+        <div id="gridAlert" class="alert d-none" role="alert"></div>
+        <div id="tablesGrid" class="tbl-grid"></div>
+        <input type="hidden" id="table_id">
+
+        <div class="d-flex align-items-center gap-3 mt-3">
+          <button id="btnReserve" class="btn btn-danger shadow-sm px-4" type="button" disabled>
+            <span id="btnSpin" class="spinner-border spinner-border-sm me-2 d-none"></span>
+            Reserve
+          </button>
+          <button id="btnReset" class="btn btn-outline-secondary shadow-sm px-4" type="button">
+            Reset
+          </button>
         </div>
       </div>
     </div>
   </div>
+</section>
+
+  <!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow-lg rounded-4">
+      
+      <!-- Header -->
+      <div class="modal-header border-0 bg-light rounded-top-4">
+        <h5 class="modal-title text-success fw-bold">
+          <i class="bi bi-check-circle-fill me-2 text-success"></i> Reservation Confirmed
+        </h5>
+        <button type="button" class="btn-close shadow-sm" data-bs-dismiss="modal"></button>
+      </div>
+      
+      <!-- Body -->
+      <div class="modal-body text-center p-4">
+        <div class="display-3 text-success mb-3">
+          <i class="bi bi-check2-circle"></i>
+        </div>
+        <h5 class="fw-bold text-dark">Your table has been reserved!</h5>
+        <p id="okMeta" class="small text-muted mt-2">—</p>
+      </div>
+      
+      <!-- Footer -->
+      <div class="modal-footer border-0 d-flex justify-content-center pb-4">
+        <a class="btn btn-danger px-4 shadow-sm" 
+           href="/restaurant-app/frontend/pages/my-reservations.php">
+          <i class="bi bi-journal-text me-1"></i> My Reservations
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
 
   <?php include __DIR__ . "/../partials/footer.html"; ?>
 

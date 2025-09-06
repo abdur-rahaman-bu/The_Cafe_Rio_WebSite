@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>My Profile | The Cafe Rio – Gulshan</title>
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
+
+  <!-- Favicon / Tab Logo -->
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
 </head>
 <body>
   <?php include __DIR__ . "/../partials/header-user.html"; ?>

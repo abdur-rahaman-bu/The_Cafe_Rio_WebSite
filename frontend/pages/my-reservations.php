@@ -9,6 +9,9 @@
   <title>My Reservations | The Cafe Rio – Gulshan</title>
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap-icons/bootstrap-icons.css" />
+
+  <!-- Favicon / Tab Logo -->
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
   <style>
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .table td,.table th{ vertical-align: middle; }

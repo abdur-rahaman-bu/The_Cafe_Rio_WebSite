@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Admin • Dashboard | The Cafe Rio – Gulshan</title>
 
+<!-- Favicon / Tab Logo -->
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
+
   <!-- Local Bootstrap -->
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
   <!-- Icons via CDN -->

@@ -4,11 +4,35 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Order Online | The Cafe Rio – Gulshan</title>
+<meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The Cafe Rio — Gulshan | Dine-in, Delivery, Reservations</title>
+  <meta name="description" content="The Cafe Rio — Gulshan: Fresh menu, online ordering, table reservations, and family-friendly dining. Open daily for dine-in and delivery." />
+  <link rel="canonical" href="/restaurant-app/index.php" />
+
+ <!-- Favicon / Tab Logo -->
+<link rel="icon" type="image/png" href="../assets/images/logo.png" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="The Cafe Rio — Gulshan" />
+  <meta property="og:description" content="Order online, reserve tables, and enjoy signature dishes at The Cafe Rio — Gulshan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/restaurant-app/index.php" />
+  <meta property="og:image" content="/restaurant-app/frontend/assets/images/_placeholder.png" />
+
+  <!-- Local Bootstrap (no CDN) -->
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Leaflet CSS (for interactive map) -->
+  <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin="anonymous">
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin="anonymous"></script>
+
   <style>
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .muted{ color:#6c757d }
