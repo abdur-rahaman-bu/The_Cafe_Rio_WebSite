@@ -10,6 +10,11 @@
 
   <link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  
+ <!-- Favicon / Tab Logo -->
+ <link rel="icon" type="image/png" href="frontend/assets/images/logo.png" />
+
+  
   <style>
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .table td,.table th{ vertical-align: middle; }

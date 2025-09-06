@@ -30,8 +30,8 @@
 
       <!-- Simple filters (optional) -->
       <div class="card-elev mb-3">
-        <div class="card-body p-3 p-md-4">
-          <div class="row g-3">
+        <div class="card-body p-3 p-md-4  bg-success text-white">
+          <div class="row g-3 ">
             <div class="col-sm-3">
               <label class="form-label">Status</label>
               <select id="f_status" class="form-select">
@@ -54,8 +54,8 @@
               <input id="f_user" type="number" min="1" class="form-control" placeholder="e.g. 2">
             </div>
             <div class="col-12 d-flex align-items-end gap-2">
-              <button id="btnApply" class="btn btn-outline-secondary"><i class="bi bi-funnel"></i> Apply</button>
-              <button id="btnReset" class="btn btn-outline-secondary"><i class="bi bi-x-circle"></i> Reset</button>
+              <button id="btnApply" class="btn btn btn-warning"><i class="bi bi-funnel"></i> Apply</button>
+              <button id="btnReset" class="btn btn btn-danger"><i class="bi bi-x-circle"></i> Reset</button>
             </div>
           </div>
         </div>
@@ -63,9 +63,9 @@
 
       <!-- Read-only grid -->
       <div class="card-elev">
-        <div class="card-body p-4">
+        <div class="card-body p-4 bg-info ">
           <div class="d-flex align-items-center justify-content-between mb-2">
-            <h5 class="fw-bold mb-0">All orders</h5>
+            <h5 class="fw-bold mb-0 text-white">All orders</h5>
           </div>
           <div id="listAlert" class="alert d-none" role="alert"></div>
           <div class="table-responsive">

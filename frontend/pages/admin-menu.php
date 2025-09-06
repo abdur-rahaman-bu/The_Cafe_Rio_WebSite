@@ -56,7 +56,7 @@
 
       <!-- Create -->
       <div class="card-elev mb-3">
-        <div class="card-body p-3 p-md-4">
+        <div class="card-body p-3 p-md-4 bg-info-subtle text-info-emphasis">
           <h5 class="fw-bold mb-3">Create item</h5>
           <div class="row g-2 align-items-end">
             <div class="col-md-3"><label class="form-label">Name</label><input id="c_name" class="form-control" placeholder="e.g. Margherita"></div>

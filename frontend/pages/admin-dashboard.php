@@ -174,24 +174,24 @@
 
   <section class="section-glass">
     <div class="container">
-      <div class="d-flex align-items-center justify-content-between mb-3 page-head">
-        <h1 class="fw-bold mb-0">Dashboard</h1>
-        <button id="btnReload" class="btn btn-outline-secondary btn-sm btn-glass" type="button">
-          <i class="bi bi-arrow-clockwise me-1"></i> Reload
+      <div class="d-flex align-items-center justify-content-between mb-3 page-head bg-success-subtle text-success-emphasis">
+        <h1 class="fw-bold mb-0 ">Dashboard</h1>
+        <button id="btnReload" class="btn btn-outline-secondary btn-sm btn-glass bg-danger-subtle  " type="button">
+          <i class="bi bi-arrow-clockwise me-1  "></i> Reload
         </button>
       </div>
 
       <div id="alert" class="alert d-none" role="alert"></div>
 
       <!-- KPIs -->
-      <div class="row g-3">
+      <div class="row g-3 ">
         <div class="col-md-3">
-          <div class="card-elev">
+          <div class="card-elev bg-primary-subtle text-primary-emphasis">
             <div class="card-body">
               <div class="kpi">
                 <div class="ico"><i class="bi bi-calendar-check"></i></div>
                 <div>
-                  <div class="muted small">Today Reservations</div>
+                  <div class="muted small text-primary">Today Reservations</div>
                   <div id="k_resv" class="h4 mb-0">—</div>
                 </div>
               </div>
@@ -200,12 +200,12 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card-elev">
+          <div class="card-elev bg-primary-subtle text-primary-emphasis">
             <div class="card-body">
               <div class="kpi">
                 <div class="ico"><i class="bi bi-receipt"></i></div>
                 <div>
-                  <div class="muted small">Today Orders</div>
+                  <div class="muted small text-primary">Today Orders</div>
                   <div id="k_ord" class="h4 mb-0">—</div>
                 </div>
               </div>
@@ -214,12 +214,12 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card-elev">
+          <div class="card-elev bg-primary-subtle text-primary-emphasis">
             <div class="card-body">
               <div class="kpi">
                 <div class="ico"><i class="bi bi-credit-card-2-front"></i></div>
                 <div>
-                  <div class="muted small">Unpaid Orders</div>
+                  <div class="muted small text-primary">Unpaid Orders</div>
                   <div id="k_unpaid" class="h4 mb-0">—</div>
                 </div>
               </div>
@@ -228,12 +228,12 @@
           </div>
         </div>
         <div class="col-md-3">
-          <div class="card-elev">
+          <div class="card-elev bg-primary-subtle text-primary-emphasis">
             <div class="card-body">
               <div class="kpi">
                 <div class="ico"><i class="bi bi-grid-3x3-gap"></i></div>
                 <div>
-                  <div class="muted small">Tables Now</div>
+                  <div class="muted small text-primary">Tables Now</div>
                   <div class="h4 mb-0"><span id="k_tab_avl">—</span> <span class="muted small">available</span></div>
                 </div>
               </div>
@@ -244,10 +244,10 @@
       </div>
 
       <!-- Recent Orders -->
-      <div class="card-elev mt-4">
+      <div class="card-elev mt-4 bg-info text-dark">
         <div class="card-body p-4">
           <div class="d-flex align-items-center justify-content-between mb-2">
-            <h5 class="fw-bold mb-0 h5-grad">Recent Orders</h5>
+            <h5 class="fw-bold mb-0 h5-grad ">Recent Orders</h5>
           </div>
           <div id="ordAlert" class="alert d-none" role="alert"></div>
           <div class="table-responsive">
@@ -272,10 +272,10 @@
       </div>
 
       <!-- Recent Reservations -->
-      <div class="card-elev mt-4">
+      <div class="card-elev mt-4 bg-danger text-white">
         <div class="card-body p-4">
           <div class="d-flex align-items-center justify-content-between mb-2">
-            <h5 class="fw-bold mb-0 h5-grad">Recent Reservations</h5>
+            <h5 class="fw-bold mb-0 h5-grad ">Recent Reservations</h5>
           </div>
           <div id="resvAlert" class="alert d-none" role="alert"></div>
           <div class="table-responsive">
@@ -357,9 +357,9 @@
         $('#k_unpaid').textContent = String(unpaidOrders);
         $('#k_tab_avl').textContent = String(available);
         $('#k_tab_occ').textContent = String(occupied);
-        $('#k_resv_meta').textContent = 'Date: ' + tdy;
-        $('#k_ord_meta').textContent = 'Date: ' + tdy;
-        $('#k_unpaid_meta').textContent = 'All-time • unpaid';
+        $('#k_resv_meta').textContent = ' Date: ' + tdy;
+        $('#k_ord_meta').textContent = ' Date: ' + tdy;
+        $('#k_unpaid_meta').textContent = ' All-time • unpaid';
       }catch(_){
         alertBox('#alert','danger','Failed to load dashboard KPIs');
       }

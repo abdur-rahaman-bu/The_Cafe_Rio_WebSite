@@ -10,6 +10,9 @@
   <meta name="description" content="The Cafe Rio — Gulshan: Fresh menu, online ordering, table reservations, and family-friendly dining. Open daily for dine-in and delivery." />
   <link rel="canonical" href="/restaurant-app/index.php" />
 
+ <!-- Favicon / Tab Logo -->
+ <link rel="icon" type="image/png" href="frontend/assets/images/logo.png" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="The Cafe Rio — Gulshan" />
   <meta property="og:description" content="Order online, reserve tables, and enjoy signature dishes at The Cafe Rio — Gulshan." />
@@ -31,6 +34,37 @@
     crossorigin="anonymous"></script>
 
   <style>
+
+
+   .heroo {
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .heroo img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .heroo .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+
+   
     :root{
       --brand:#dc3545; --ink:#222; --muted:#6c757d; --line:#eef1f4; --radius:18px;
       --glass1: rgba(255,255,255,.35); --glass2: rgba(255,255,255,.14); --blur: 10px;
@@ -40,14 +74,14 @@
     .glass{ background: linear-gradient(135deg, var(--glass1), var(--glass2)); border: 1px solid rgba(255,255,255,.35);
       backdrop-filter: blur(var(--blur)); -webkit-backdrop-filter: blur(var(--blur)); border-radius: var(--radius); box-shadow: var(--shadow); }
     .hero{ position:relative; background: radial-gradient(1200px 600px at 10% 10%, #fff 0, #f7f9fb 45%, #f3f6f9 100%); padding: 48px 0; }
-    .hero-badge{display:inline-block; padding:.28rem .6rem; border-radius:999px; background:#fff; border:1px solid var(--line); font-size:.85rem}
+    .hero-badge{display:inline-block; padding:.28rem .6rem; border-radius:999px; background:#fd7e14; border:1px solid var(--line); font-size:.85rem}
     .hero h1{font-weight:800; letter-spacing:-.02em}
     .cta .btn{border-radius:12px}
     .section{padding: 48px 0}
     .section-title{font-weight:800}
     .muted{color:var(--muted)}
     .features{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px}
-    .feature{padding:16px; border:1px solid var(--line); border-radius:16px; background:#fff}
+    .feature{padding:16px; border:1px solid var(--line); border-radius:16px; background: #0dcaf0;}
     .feature .bi{font-size:1.25rem; color:var(--brand)}
     .menu-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px}
     .menu-card{display:flex; flex-direction:column; border-radius:16px; overflow:hidden; border:1px solid var(--line); background:#fff; min-height:300px}
@@ -87,6 +121,21 @@
 <body>
 
   <?php include __DIR__ . "/frontend/partials/header-user.html"; ?>
+
+
+  <div class="heroo position-relative">
+    <video autoplay muted loop playsinline class="w-100" style="object-fit: cover; height: 100vh;">
+      <source src="images/bg.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Content -->
+    <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="fw-bold display-5 fst-italic">The Cafe Rio</h1>
+      <p class="lead fst-italic">Best Buffet in Town </p>
+      <!-- <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a> -->
+    </div>
+  </div>
 
   <!-- Hero -->
   <section class="hero">
@@ -203,7 +252,7 @@
         <div class="d-flex gap-2 mt-2">
           <span class="badge-soft"><i class="bi bi-geo-alt"></i> Road 12, Gulshan, Dhaka</span>
           <span class="badge-soft"><i class="bi bi-telephone"></i> +8801799-437172</span>
-          <span class="badge-soft"><i class="bi bi-clock"></i> 10:00 AM – 11:00 PM</span>
+          <span class="badge-soft"><i class="bi bi-clock"></i> 10:00AM–11:00 PM</span>
         </div>
       </div>
 
