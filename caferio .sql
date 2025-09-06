@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 03, 2025 at 09:01 PM
+-- Generation Time: Sep 07, 2025 at 12:43 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,7 +44,17 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`item_id`, `name`, `description`, `price`, `category`, `image`, `status`, `created_at`, `updated_at`) VALUES
-(16, 'Phitron', '', 100.00, 'coding', 'menu-16-1756923286-20250903201446-5787909a.jpg', 'available', '2025-09-03 18:14:46', '2025-09-03 18:30:47');
+(16, 'CHICKEN FRIED RICE', 'Chicken biriyani is a fragrant,spiced', 300.00, 'RICE', 'menu-16-1757116061-20250906014741-595f8068.png', 'available', '2025-09-03 18:14:46', '2025-09-05 23:48:44'),
+(17, 'MUTTON KACCHI BIRIYANI', 'Mutton kacchi Biriyani is a flavorful', 500.00, 'BIRIYANI', 'menu-17-1757109246-20250905235406-d90b08ba.png', 'available', '2025-09-05 21:54:06', '2025-09-05 21:54:06'),
+(18, 'CHICKEN BIRIYANI', 'Chicken biriyani is a fragrant,spiced', 350.00, 'BIRIYANI', 'menu-18-1757115821-20250906014341-bfd46a74.png', 'available', '2025-09-05 23:43:41', '2025-09-05 23:43:41'),
+(19, 'CHICKEN SIZZLING', 'Chicken sizzling is a popular dish', 450.00, 'CHICKEN', 'menu-19-1757115983-20250906014623-3151ade6.png', 'available', '2025-09-05 23:46:23', '2025-09-05 23:46:23'),
+(20, 'STEAM RICE', 'Simple dish made by cooking rice', 50.00, 'RICE', 'menu-20-1757116180-20250906014940-9cdce5b9.png', 'available', '2025-09-05 23:49:40', '2025-09-05 23:49:40'),
+(21, 'THAI SOUP', 'Thai soup is a flavorful and', 150.00, 'SOUP', 'menu-21-1757157910-20250906132510-60648001.png', 'available', '2025-09-06 11:25:10', '2025-09-06 11:25:10'),
+(22, 'CORN SOUP', 'Corn Soup is a creamy, comforting', 120.00, 'SOUP', 'menu-22-1757157973-20250906132613-ae19a2db.png', 'available', '2025-09-06 11:26:13', '2025-09-06 11:26:13'),
+(23, 'MIXED SALAD', 'Mixed salad is a colorful combination', 200.00, 'SALAD', 'menu-23-1757158037-20250906132717-3481aa6f.png', 'available', '2025-09-06 11:27:17', '2025-09-06 11:27:17'),
+(24, 'ONION SALAD', 'Onion salad is a simple, tangy', 200.00, 'SALAD', 'menu-24-1757158101-20250906132821-744fc9f6.png', 'available', '2025-09-06 11:28:21', '2025-09-06 11:28:21'),
+(25, 'TOMATO SALAD', 'Tomato salad is a refreshing dish', 150.00, 'SALAD', 'menu-25-1757158184-20250906132944-9385517f.png', 'available', '2025-09-06 11:29:44', '2025-09-06 11:29:44'),
+(26, 'CHICKEN SIZZLING', 'Chicken Sizzling is a popular dish', 500.00, 'CHICKEN', 'menu-26-1757158362-20250906133242-a6744d6a.png', 'available', '2025-09-06 11:32:42', '2025-09-06 11:32:42');
 
 -- --------------------------------------------------------
 
@@ -81,7 +91,10 @@ INSERT INTO `orders` (`order_id`, `user_id`, `status`, `total_amount`, `payment_
 (10, 1, 'pending', 260.00, 'cod', 'unpaid', '', '2025-09-02 20:17:07', '2025-09-02 20:17:07'),
 (11, 1, 'pending', 420.00, 'cod', 'unpaid', '', '2025-09-02 20:19:21', '2025-09-02 20:19:21'),
 (12, 1, 'confirmed', 200.00, 'cod', 'paid', '', '2025-09-03 18:17:25', '2025-09-03 18:17:27'),
-(13, 5, 'confirmed', 200.00, 'cod', 'paid', '', '2025-09-03 18:31:11', '2025-09-03 18:31:12');
+(13, 5, 'confirmed', 200.00, 'cod', 'paid', '', '2025-09-03 18:31:11', '2025-09-03 18:31:12'),
+(14, 7, 'confirmed', 100.00, 'bkash', 'paid', '', '2025-09-05 18:19:10', '2025-09-05 18:19:14'),
+(15, 8, 'confirmed', 150.00, 'nagad', 'paid', '', '2025-09-06 20:59:33', '2025-09-06 20:59:37'),
+(16, 9, 'confirmed', 500.00, 'bkash', 'paid', 'ok', '2025-09-06 21:18:05', '2025-09-06 21:18:15');
 
 -- --------------------------------------------------------
 
@@ -116,7 +129,10 @@ INSERT INTO `order_items` (`id`, `order_id`, `item_id`, `name`, `unit_price`, `q
 (10, 10, 3, 'Garden Salad', 260.00, 1, 260.00),
 (11, 11, 2, 'Creamy Pasta', 420.00, 1, 420.00),
 (12, 12, 16, 'fff', 100.00, 2, 200.00),
-(13, 13, 16, 'Phitron', 100.00, 2, 200.00);
+(13, 13, 16, 'Phitron', 100.00, 2, 200.00),
+(14, 14, 16, 'Phitron', 100.00, 1, 100.00),
+(15, 15, 25, 'TOMATO SALAD', 150.00, 1, 150.00),
+(16, 16, 26, 'CHICKEN SIZZLING', 500.00, 1, 500.00);
 
 -- --------------------------------------------------------
 
@@ -151,7 +167,14 @@ INSERT INTO `reservations` (`reservation_id`, `user_id`, `reservation_date`, `re
 (6, 1, '2025-09-03', '02:30:00', 90, 2, '', 'confirmed', '', '2025-09-02 20:26:02', '2025-09-02 20:26:02'),
 (7, 1, '2025-09-03', '00:00:00', 90, 2, '', 'confirmed', '', '2025-09-03 17:34:23', '2025-09-03 17:34:23'),
 (8, 1, '2025-09-04', '00:30:00', 90, 2, '', 'confirmed', '', '2025-09-03 18:20:27', '2025-09-03 18:20:27'),
-(9, 1, '2025-09-04', '00:30:00', 90, 2, '', 'confirmed', '', '2025-09-03 18:21:03', '2025-09-03 18:21:03');
+(9, 1, '2025-09-04', '00:30:00', 90, 2, '', 'confirmed', '', '2025-09-03 18:21:03', '2025-09-03 18:21:03'),
+(10, 7, '2025-09-06', '04:00:00', 90, 2, '', 'confirmed', '', '2025-09-05 21:46:32', '2025-09-05 21:46:32'),
+(11, 4, '2025-09-06', '20:00:00', 90, 2, '', 'confirmed', 'Fresh Food', '2025-09-06 13:51:01', '2025-09-06 13:51:01'),
+(12, 8, '2025-09-07', '03:00:00', 90, 2, '', 'confirmed', '', '2025-09-06 20:49:57', '2025-09-06 20:49:57'),
+(13, 8, '2025-09-07', '03:30:00', 90, 2, '', 'confirmed', '', '2025-09-06 21:03:54', '2025-09-06 21:03:54'),
+(14, 8, '2025-09-07', '03:30:00', 90, 2, '', 'confirmed', '', '2025-09-06 21:05:01', '2025-09-06 21:05:01'),
+(15, 8, '2025-09-09', '03:30:00', 180, 2, '', 'confirmed', '', '2025-09-06 21:06:01', '2025-09-06 21:06:01'),
+(16, 9, '2025-09-07', '04:00:00', 90, 2, '', 'confirmed', '', '2025-09-06 21:32:00', '2025-09-06 21:32:00');
 
 -- --------------------------------------------------------
 
@@ -175,12 +198,18 @@ INSERT INTO `reservation_tables` (`id`, `reservation_id`, `table_id`, `from_time
 (1, 1, 6, '17:30:00', '19:00:00'),
 (2, 2, 3, '17:30:00', '19:00:00'),
 (3, 3, 1, '01:30:00', '03:00:00'),
-(4, 4, 2, '01:30:00', '02:30:00'),
-(5, 5, 2, '03:00:00', '04:30:00'),
-(6, 6, 3, '02:30:00', '04:00:00'),
+(4, 1, 2, '01:30:00', '02:30:00'),
+(5, 7, 2, '03:00:00', '04:30:00'),
+(6, 1, 3, '02:30:00', '04:00:00'),
 (7, 7, 1, '00:00:00', '01:30:00'),
 (8, 8, 2, '00:30:00', '02:00:00'),
-(9, 9, 6, '00:30:00', '02:00:00');
+(9, 9, 6, '00:30:00', '02:00:00'),
+(10, 10, 1, '04:00:00', '05:30:00'),
+(12, 12, 1, '03:00:00', '04:30:00'),
+(13, 13, 4, '03:30:00', '05:00:00'),
+(14, 14, 6, '03:30:00', '05:00:00'),
+(15, 15, 5, '03:30:00', '06:30:00'),
+(16, 16, 3, '04:00:00', '05:30:00');
 
 -- --------------------------------------------------------
 
@@ -205,7 +234,12 @@ INSERT INTO `reviews` (`review_id`, `user_id`, `item_id`, `rating`, `comment`, `
 (1, 1, NULL, 4, '', '2025-09-03 17:40:29'),
 (2, 1, 16, 3, 'খাবার ভালো না', '2025-09-03 18:18:43'),
 (3, 5, 16, 5, '', '2025-09-03 18:31:56'),
-(4, 6, 16, 5, '', '2025-09-03 18:51:42');
+(4, 6, 16, 5, '', '2025-09-03 18:51:42'),
+(5, 7, 16, 4, 'delicious', '2025-09-05 18:16:47'),
+(6, 8, 23, 5, 'delicious', '2025-09-06 20:31:58'),
+(7, 8, 22, 5, 'Delicious', '2025-09-06 20:33:31'),
+(8, 8, 25, 5, 'JUST WOW!', '2025-09-06 21:03:18'),
+(9, 9, 17, 5, 'MUTTON IN NOT PERFECT', '2025-09-06 21:17:41');
 
 -- --------------------------------------------------------
 
@@ -221,7 +255,7 @@ CREATE TABLE `tables` (
   `status` enum('active','inactive') NOT NULL DEFAULT 'active',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tables`
@@ -234,7 +268,7 @@ INSERT INTO `tables` (`table_id`, `name`, `capacity`, `zone`, `status`, `created
 (4, 'T4', 4, 'Family', 'active', '2025-09-02 10:00:27', '2025-09-02 10:00:27'),
 (5, 'T5', 6, 'Family', 'active', '2025-09-02 10:00:27', '2025-09-02 10:00:27'),
 (6, 'W1', 2, 'Window', 'active', '2025-09-02 10:00:27', '2025-09-02 10:00:27'),
-(7, 'W2', 4, 'Window', 'active', '2025-09-02 10:00:27', '2025-09-02 10:00:27');
+(8, 'W1', 12, 'window', 'active', '2025-09-06 21:37:07', '2025-09-06 21:37:07');
 
 -- --------------------------------------------------------
 
@@ -257,10 +291,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `name`, `email`, `password_hash`, `role`, `created_at`, `updated_at`) VALUES
-(1, 'yeatasim', 'shahin@gmail.com', '$2y$10$6TIZT6x9.G7Qz.HoYLhN0uG1MuNWDSDP0r5ey3KZBlzUUnIFzKp3q', 'admin', '2025-09-02 10:37:22', '2025-09-02 11:05:23'),
+(1, 'abdur', 'abdur@gmail.com', '$2y$10$6TIZT6x9.G7Qz.HoYLhN0uG1MuNWDSDP0r5ey3KZBlzUUnIFzKp3q', 'admin', '2025-09-02 10:37:22', '2025-09-05 23:08:48'),
 (4, 'yeatasim', 'shahin12@gmail.com', '$2y$10$2PuGh0/Jv3MlfABr74o2H.zox4wCkTKHxBYfupb9rdhEH9r3OGkWS', 'user', '2025-09-02 11:20:36', '2025-09-02 11:20:36'),
 (5, 'fffffff', 'shahin121@gmail.com', '$2y$10$ccZS64YcpCvLJhxxKf2CwumQYjAuc/xwFWzvk57oMEJR9jFto.woK', 'user', '2025-09-03 18:23:54', '2025-09-03 18:23:54'),
-(6, 'ffffffff', 'ffffffff@gmail.com', '$2y$10$Bzx5PKtFhJkfJ1F/H/zq2.rGD9u5cKB5cAszApd1UC3P2nSC4L0L2', 'user', '2025-09-03 18:51:26', '2025-09-03 18:51:26');
+(6, 'ffffffff', 'ffffffff@gmail.com', '$2y$10$Bzx5PKtFhJkfJ1F/H/zq2.rGD9u5cKB5cAszApd1UC3P2nSC4L0L2', 'user', '2025-09-03 18:51:26', '2025-09-03 18:51:26'),
+(7, 'Mohammad Abdur Rahaman', 'ab.rahamancse9.bu@gamil.com', '$2y$10$HzkzrZV6T2guGKSgs3Hvm.qswqY3iY19yVCJbYWz7B88k7f6jgEZ6', 'admin', '2025-09-05 18:15:35', '2025-09-05 18:31:25'),
+(8, 'abdur Rahamn', 'arahaman22.cse@bu.ac.bd', '$2y$10$MmpW2HFbfA3CDwSku0U6Qe4gtQFESRA16OqlyEkyVFancWbn9SlwG', 'user', '2025-09-05 23:06:58', '2025-09-05 23:06:58'),
+(9, 'biplob Hossain', 'biplob@gmail.com', '$2y$10$dS8.C/xeZB33n1X6CPixWufbnMakJK9T4FPuhKNK2HC7gTR6nXn56', 'user', '2025-09-06 21:07:33', '2025-09-06 21:07:33');
 
 --
 -- Indexes for dumped tables
@@ -340,49 +377,49 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `order_items`
 --
 ALTER TABLE `order_items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `reservations`
 --
 ALTER TABLE `reservations`
-  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `reservation_tables`
 --
 ALTER TABLE `reservation_tables`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `reviews`
 --
 ALTER TABLE `reviews`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tables`
 --
 ALTER TABLE `tables`
-  MODIFY `table_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `table_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables

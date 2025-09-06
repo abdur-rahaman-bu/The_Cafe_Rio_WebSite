@@ -115,9 +115,9 @@
                             <input id="f_user" type="number" min="1" class="form-control" placeholder="e.g. 2">
                         </div>
                         <div class="col-12 d-flex align-items-end gap-2">
-                            <button id="btnApply" class="btn btn btn-warning"><i class="bi bi-funnel"></i>
+                            <button id="btnApply" class=" btn btn-warning"><i class="bi bi-funnel"></i>
                                 Apply</button>
-                            <button id="btnReset" class="btn btn btn-danger"><i class="bi bi-x-circle"></i>
+                            <button id="btnReset" class="btn btn-danger"><i class="bi bi-x-circle"></i>
                                 Reset</button>
                         </div>
                     </div>

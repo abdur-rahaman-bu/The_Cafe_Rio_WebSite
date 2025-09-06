@@ -203,11 +203,11 @@
         <div class="col-md-4">
           <div class="event-card">
             <div class="event-img">
-              <img src="../assets/images/room/hous.png" class="img-fluid" alt="Food Point/Kids Zone">
+              <img src="../assets/images/room/rio.png" class="img-fluid" alt="Food Point/Kids Zone">
             </div>
             <div class="event-body text-center">
               <div class="rating mb-2">⭐⭐⭐⭐✰</div>
-              <h5 class="fw-bold">FOOD POINT/KIDS ZONE</h5>
+              <h5 class="fw-bold">PHOTO ZONE</h5>
             </div>
           </div>
         </div>

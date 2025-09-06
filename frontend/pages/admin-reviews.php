@@ -87,8 +87,8 @@
     <!-- Overlay Content -->
     <img src="../assets/images/sbg.png" alt="Campus">
     <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
-      <h1 class="fw-bold display-5 fst-italic">OUR GUST REVIEW</h1>
-      <p class="lead fst-italic  ">
+      <h1 class="fw-bold display-5 fst-italic">OUR GUEST REVIEW</h1>
+      <p class="lead fst-italic text-center  ">
         <a class="nav-link" href="/restaurant-app/frontend/pages/admin-dashboard.php">HOME</a>
       </p>
       <!-- <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a> -->
@@ -96,7 +96,7 @@
   </div>
 
   <section class="py-5 bg-light">
-    <div class="container">
+    <div class="container ">
       <div class="d-flex align-items-center justify-content-between mb-3">
         <h1 class="fw-bold">Reviews</h1>
         <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button">
@@ -106,7 +106,7 @@
 
       <div id="alert" class="alert d-none" role="alert"></div>
 
-      <div class="card-elev mb-3">
+      <div class="card-elev mb-3 bg-success text-white">
         <div class="card-body p-3 p-md-4">
           <div class="row g-2">
             <div class="col-sm-2"><label class="form-label">Item ID</label><input id="f_item" type="number" min="1" class="form-control"></div>
@@ -115,15 +115,15 @@
             <div class="col-sm-3"><label class="form-label">From</label><input id="f_from" type="date" class="form-control"></div>
             <div class="col-sm-3"><label class="form-label">To</label><input id="f_to" type="date" class="form-control"></div>
             <div class="col-12 d-flex align-items-end gap-2">
-              <button id="btnApply" class="btn btn-outline-secondary"><i class="bi bi-funnel"></i> Apply</button>
-              <button id="btnReset" class="btn btn-outline-secondary"><i class="bi bi-x-circle"></i> Reset</button>
+              <button id="btnApply" class="btn btn-warning"><i class="bi bi-funnel"></i> Apply</button>
+              <button id="btnReset" class="btn btn-danger"><i class="bi bi-x-circle"></i> Reset</button>
             </div>
           </div>
         </div>
       </div>
 
       <div class="card-elev">
-        <div class="card-body p-4">
+        <div class="card-body p-4  bg-info">
           <div class="d-flex align-items-center justify-content-between mb-2">
             <h5 class="fw-bold mb-0">All reviews</h5>
           </div>

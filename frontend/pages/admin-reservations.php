@@ -40,6 +40,33 @@
       padding: 20px;
       border-radius: 12px;
     }
+     /* Card hover */
+  .card-elev {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+  .card-elev:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  /* Table row hover colorful */
+  table.table-hover tbody tr:hover {
+    background: linear-gradient(90deg, #ffecd2, #fcb69f);
+    color: #000;
+    cursor: pointer;
+  }
+
+  /* Button hover glow */
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  /* Smooth transition */
+  .btn, .table, .card-elev {
+    transition: all 0.3s ease-in-out;
+  }
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .table td,.table th{ vertical-align: middle; }
     .mono{ font-family: ui-monospace, Menlo, Consolas, monospace; }
@@ -64,78 +91,80 @@
   </div>
 
   <section class="py-5 bg-light">
-    <div class="container">
-      <div class="d-flex align-items-center justify-content-between mb-3">
-        <h1 class="fw-bold">Reservations</h1>
-      </div>
-
-      <div id="alert" class="alert d-none" role="alert"></div>
-
-      <!-- Simple filters (optional) -->
-      <div class="card-elev mb-3">
-        <div class="card-body p-3 p-md-4">
-          <div class="row g-3">
-            <div class="col-sm-3">
-              <label class="form-label">Status</label>
-              <select id="f_status" class="form-select">
-                <option value="">(any)</option>
-                <option value="pending">pending</option>
-                <option value="confirmed">confirmed</option>
-                <option value="cancelled">cancelled</option>
-              </select>
-            </div>
-            <div class="col-sm-3">
-              <label class="form-label">From (date)</label>
-              <input id="f_from" type="date" class="form-control">
-            </div>
-            <div class="col-sm-3">
-              <label class="form-label">To (date)</label>
-              <input id="f_to" type="date" class="form-control">
-            </div>
-            <div class="col-sm-3">
-              <label class="form-label">User ID</label>
-              <input id="f_user" type="number" min="1" class="form-control" placeholder="e.g. 2">
-            </div>
-            <div class="col-12 d-flex align-items-end gap-2">
-              <button id="btnApply" class="btn btn-outline-secondary"><i class="bi bi-funnel"></i> Apply</button>
-              <button id="btnReset" class="btn btn-outline-secondary"><i class="bi bi-x-circle"></i> Reset</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Read-only grid -->
-      <div class="card-elev">
-        <div class="card-body p-4">
-          <div class="d-flex align-items-center justify-content-between mb-2">
-            <h5 class="fw-bold mb-0">All reservations</h5>
-          </div>
-          <div id="listAlert" class="alert d-none" role="alert"></div>
-          <div class="table-responsive">
-            <table class="table table-striped align-middle">
-              <thead>
-                <tr>
-                  <th class="mono">Resv</th>
-                  <th>User</th>
-                  <th>Date</th>
-                  <th>Time</th>
-                  <th>Dur</th>
-                  <th>People</th>
-                  <th>Type</th>
-                  <th>Status</th>
-                  <th>Placed</th>
-                </tr>
-              </thead>
-              <tbody id="grid">
-                <tr><td colspan="9" class="text-center text-muted">Loading…</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </div>
-
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-between mb-3">
+      <h1 class="fw-bold">Reservations</h1>
     </div>
-  </section>
+
+    <div id="alert" class="alert d-none" role="alert"></div>
+
+    <!-- Filters -->
+    <div class="card-elev mb-3">
+      <div class="card-body p-3 p-md-4 bg-success text-white">
+        <div class="row g-3">
+          <div class="col-sm-3">
+            <label class="form-label">Status</label>
+            <select id="f_status" class="form-select">
+              <option value="">(any)</option>
+              <option value="pending">pending</option>
+              <option value="confirmed">confirmed</option>
+              <option value="cancelled">cancelled</option>
+            </select>
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">From (date)</label>
+            <input id="f_from" type="date" class="form-control">
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">To (date)</label>
+            <input id="f_to" type="date" class="form-control">
+          </div>
+          <div class="col-sm-3">
+            <label class="form-label">User ID</label>
+            <input id="f_user" type="number" min="1" class="form-control" placeholder="e.g. 2">
+          </div>
+          <div class="col-12 d-flex align-items-end gap-2">
+            <button id="btnApply" class="btn btn-warning"><i class="bi bi-funnel"></i> Apply</button>
+            <button id="btnReset" class="btn btn-danger"><i class="bi bi-x-circle"></i> Reset</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="card-elev">
+      <div class="card-body p-4 bg-info text-white">
+        <div class="d-flex align-items-center justify-content-between mb-2">
+          <h5 class="fw-bold mb-0">All reservations</h5>
+        </div>
+        <div id="listAlert" class="alert d-none" role="alert"></div>
+        <div class="table-responsive">
+          <table class="table table-striped align-middle table-hover">
+            <thead class="table-dark">
+              <tr>
+                <th class="mono">Resv</th>
+                <th>User</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Dur</th>
+                <th>People</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Placed</th>
+              </tr>
+            </thead>
+            <tbody id="grid">
+              <tr><td colspan="9" class="text-center text-muted">Loading…</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
   <?php include __DIR__ . "/../partials/footer.html"; ?>
 

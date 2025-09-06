@@ -78,7 +78,7 @@
       <div id="alert" class="alert d-none" role="alert"></div>
 
       <!-- Create Table Form -->
-      <div class="card-elev mb-4">
+      <div class="card-elev mb-4 bg-info text-dark">
         <div class="card-header bg-white border-0">
           <h5 class="fw-bold mb-0"><i class="bi bi-plus-circle me-2 text-danger"></i>Create Table</h5>
         </div>

@@ -200,7 +200,7 @@
 </head>
 <body>
   <?php include __DIR__ . "/../partials/header-admin.html"; ?>
-  !-- Hero Section -->
+  <!-- Hero Section --> 
    <div class="hero position-relative">
     <!-- Overlay Content -->
     <img src="../assets/images/sbg.png" alt="Campus">
