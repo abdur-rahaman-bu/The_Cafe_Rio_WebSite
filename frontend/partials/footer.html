@@ -2,58 +2,114 @@
 <footer class="bg-dark text-light pt-5 pb-3">
   <div class="container">
     <div class="row gy-4">
-      <div class="col-md-4">
+
+      <!-- About -->
+      <div class="col-md-3">
         <h5 class="fw-bold mb-3">The Cafe Rio – Gulshan</h5>
         <p class="mb-2">
-          Best buffet in town. Family, friends and celebrations—book and order
-          online.
+          Best buffet in town. Family, friends and celebrations—book and order online.
         </p>
         <span class="badge bg-danger">Open Daily</span>
       </div>
-      <div class="col-md-4">
+
+      <!-- Contact -->
+      <div class="col-md-3">
         <h5 class="fw-bold mb-3">Contact</h5>
         <ul class="list-unstyled mb-0">
           <li>Gulshan-1, Dhaka 1212</li>
           <li class="mt-2">Phone: 01799-437172</li>
         </ul>
       </div>
-      <div class="col-md-4">
+
+      <!-- Hours -->
+      <div class="col-md-3">
         <h5 class="fw-bold mb-3">Hours</h5>
         <ul class="list-unstyled mb-2">
-          <li>Lunch: 12:30 PM – 3:30 PM</li>
-          <li class="mt-2">Dinner: 6:30 PM – 10:30 PM</li>
+          <li>Lunch: 1:00 PM – 3:00 PM</li>
+          <li class="mt-2">Dinner: 7:00 PM – 10:00 PM</li>
         </ul>
       </div>
+
+      <!-- Social Links -->
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">Follow Us</h5>
+        <div class="social-icons d-flex gap-3 fs-4">
+          <a href="https://www.facebook.com/caferiogulshan/" class="text-light"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
     </div>
+
     <hr class="border-secondary my-4" />
-    <div
-      class="d-flex flex-column flex-md-row justify-content-between align-items-center"
-    >
-      <p class="mb-0">
-        &copy;
-        <?php echo date("Y"); ?>
-        The Cafe Rio – Gulshan.
-      </p>
-      <p class="mb-0">Designed by Ab.Rahaman & Md.Biplob Hossain</p>
+
+    <!-- Footer Bottom -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <p class="mb-0">&copy; <?php echo date("Y"); ?> The Cafe Rio – Gulshan.</p>
+      <p class="mb-0">Designed by Ab.Rahaman &amp; Md.Biplob Hossain</p>
     </div>
   </div>
 </footer>
 
-<link
-  rel="stylesheet"
-  href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap-icons.css"
-/>
-<script
-  src="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.bundle.min.js"
-  defer
-></script>
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap-icons.css" />
 
+<!-- Bootstrap Bundle -->
+<script src="/restaurant-app/frontend/assets/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+
+<!-- Image Fallback Script -->
 <script>
-  (function(){
-    var PH = (typeof APP_BASE === 'string' ? APP_BASE : '') + '/frontend/assets/images/_placeholder.png';
-    function applyFallback(img){ if (img && !img.dataset.fallbackApplied){ img.dataset.fallbackApplied='1'; img.src=PH; } }
-    function wire(img){ if (!img || img.dataset.fallbackWired) return; img.dataset.fallbackWired='1'; img.addEventListener('error', ()=> applyFallback(img)); }
-    function init(){ document.querySelectorAll('img').forEach(wire); if ('MutationObserver' in window){ new MutationObserver(muts=> muts.forEach(m=>{ m.addedNodes.forEach(n=>{ if (n && n.tagName==='IMG') wire(n); else if (n && n.querySelectorAll) n.querySelectorAll('img').forEach(wire); }); }))).observe(document.documentElement,{childList:true,subtree:true}); } }
-    if (document.readyState==='complete' || document.readyState==='interactive') init(); else window.addEventListener('DOMContentLoaded', init);
+  (function () {
+    // Default placeholder path
+    const PH = (typeof APP_BASE === 'string' ? APP_BASE : '') + '/frontend/assets/images/_placeholder.png';
+
+    // Replace broken image with placeholder
+    function applyFallback(img) {
+      if (img && !img.dataset.fallbackApplied) {
+        img.dataset.fallbackApplied = '1';
+        img.src = PH;
+      }
+    }
+
+    // Attach error handler to image
+    function wire(img) {
+      if (!img || img.dataset.fallbackWired) return;
+      img.dataset.fallbackWired = '1';
+      img.addEventListener('error', () => applyFallback(img));
+    }
+
+    // Initialize fallback for all images + future added images
+    function init() {
+      document.querySelectorAll('img').forEach(wire);
+
+      if ('MutationObserver' in window) {
+        new MutationObserver(mutations => {
+          mutations.forEach(m => {
+            m.addedNodes.forEach(n => {
+              if (n.tagName === 'IMG') wire(n);
+              else if (n.querySelectorAll) n.querySelectorAll('img').forEach(wire);
+            });
+          });
+        }).observe(document.documentElement, { childList: true, subtree: true });
+      }
+    }
+
+    // Run when DOM is ready
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      init();
+    } else {
+      window.addEventListener('DOMContentLoaded', init);
+    }
   })();
 </script>
+
+<style>
+  /* Social icons hover effect */
+  .social-icons a {
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #dc3545; /* Bootstrap danger color */
+  }
+</style>

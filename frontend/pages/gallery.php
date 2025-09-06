@@ -36,6 +36,68 @@
 
   
   <style>
+    /* Hero */
+    .hero {
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+
+.event-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+  }
+  
+  .event-img img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .event-card:hover .event-img img {
+    transform: scale(1.1);
+  }
+  
+  .event-body {
+    padding: 15px;
+  }
+  
+  .rating {
+    color: #ff9800;
+    font-size: 18px;
+  }
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .muted{ color:#6c757d }
     .menu-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px }
@@ -50,6 +112,111 @@
 </head>
 <body>
   <?php include __DIR__ . "/../partials/header-user.html"; ?>
+
+  
+  <!-- Hero Section -->
+  <div class="hero position-relative">
+    <!-- Overlay Content -->
+    <img src="../assets/images/sbg.png" alt="Campus">
+    <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="fw-bold display-5 fst-italic">OUR GALLERY</h1>
+      <p class="lead fst-italic text-white ">
+        <a class="nav-link" href="/restaurant-app/index.php">HOME</a>
+      </p>
+      <!-- <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a> -->
+    </div>
+  </div>
+
+
+
+  <!-- Event Room Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold mb-5">Event Room</h2>
+      <div class="row g-4">
+        
+        <!-- Card 1 -->
+        <div class="col-md-4">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../assets/images/room/party.png" class="img-fluid" alt="Metal Zone">
+            </div>
+            <div class="event-body text-center">
+              <div class="rating mb-2">⭐⭐⭐⭐✰</div>
+              <h5 class="fw-bold">METAL ZONE</h5>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 2 -->
+        <div class="col-md-4">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../assets/images/room/holl.png" class="img-fluid" alt="RWS">
+            </div>
+            <div class="event-body text-center">
+              <div class="rating mb-2">⭐⭐⭐⭐✰</div>
+              <h5 class="fw-bold">RWS</h5>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="col-md-4">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../assets/images/room/buffet.png" class="img-fluid" alt="Food Point/Kids Zone">
+            </div>
+            <div class="event-body text-center">
+              <div class="rating mb-2">⭐⭐⭐⭐✰</div>
+              <h5 class="fw-bold">FOOD POINT</h5>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Card 4 -->
+        <div class="col-md-4">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../assets/images/room/see_food.png" class="img-fluid" alt="Food Point/Kids Zone">
+            </div>
+            <div class="event-body text-center">
+              <div class="rating mb-2">⭐⭐⭐⭐✰</div>
+              <h5 class="fw-bold">SEE FOOD CORNER</h5>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5-->
+        <div class="col-md-4">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../assets/images/room/food_corner.png" class="img-fluid" alt="Food Point/Kids Zone">
+            </div>
+            <div class="event-body text-center">
+              <div class="rating mb-2">⭐⭐⭐⭐✰</div>
+              <h5 class="fw-bold">FOOD ZONE</h5>
+            </div>
+          </div>
+        </div>
+        <!-- Card 6-->
+        <div class="col-md-4">
+          <div class="event-card">
+            <div class="event-img">
+              <img src="../assets/images/room/hous.png" class="img-fluid" alt="Food Point/Kids Zone">
+            </div>
+            <div class="event-body text-center">
+              <div class="rating mb-2">⭐⭐⭐⭐✰</div>
+              <h5 class="fw-bold">FOOD POINT/KIDS ZONE</h5>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  
+
 
   <section class="py-5 bg-light">
     <div class="container">
