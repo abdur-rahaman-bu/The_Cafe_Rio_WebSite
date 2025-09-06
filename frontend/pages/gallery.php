@@ -98,6 +98,34 @@
     color: #ff9800;
     font-size: 18px;
   }
+  .team-card {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  
+  .team-card img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .chef-tag {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #d9534f;
+    color: #fff;
+    padding: 4px 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9rem;
+  }
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .muted{ color:#6c757d }
     .menu-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px }
@@ -253,6 +281,114 @@
           <div id="menuAlert" class="alert d-none" role="alert"></div>
           <div id="grid" class="menu-grid" aria-live="polite" aria-busy="true"></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Team Section -->
+<section class="py-5 bg-light text-center">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Single Chef Card -->
+        <h2 class="fw-bold mb-5">OUR SPECIAL CHEF</h2>
+        <div class="col-md-4">
+          <div class="card team-card shadow-sm border-0">
+            <img src="../assets/images/chef/jakir.png" class="card-img-top" alt="Chef">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1">Md Jakir Hossen</h5>
+              <p class="text-muted">Executive Chef</p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-facebook text-success"></i></a>
+                <a href="#"><i class="bi bi-twitter text-primary"></i></a>
+                <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+              </div>
+            </div>
+            <span class="chef-tag">CHEF</span>
+          </div>
+        </div>
+  
+        <!-- Copy this block for other chefs -->
+        <div class="col-md-4">
+          <div class="card team-card shadow-sm border-0">
+            <img src="../assets/images/chef/mostafa.png" class="card-img-top" alt="Chef">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1">Md Mostafa Kamal</h5>
+              <p class="text-muted">Chinese Chef</p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-facebook text-success"></i></a>
+                <a href="#"><i class="bi bi-twitter text-primary"></i></a>
+                <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+              </div>
+            </div>
+            <span class="chef-tag">CHEF</span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card team-card shadow-sm border-0">
+            <img src="../assets/images/chef/jakirkhan.png" class="card-img-top" alt="Chef">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1">Md Jakir Khan</h5>
+              <p class="text-muted">Pastry Chef</p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-facebook text-success"></i></a>
+                <a href="#"><i class="bi bi-twitter text-primary"></i></a>
+                <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+              </div>
+            </div>
+            <span class="chef-tag">CHEF</span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card team-card shadow-sm border-0">
+            <img src="../assets/images/chef/roman.png" class="card-img-top" alt="Chef">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1">Roman Islam</h5>
+              <p class="text-muted">Kebab Chef</p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-facebook text-success"></i></a>
+                <a href="#"><i class="bi bi-twitter text-primary"></i></a>
+                <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+              </div>
+            </div>
+            <span class="chef-tag">CHEF</span>
+          </div>
+        </div>
+
+
+        <div class="col-md-4">
+          <div class="card team-card shadow-sm border-0">
+            <img src="../assets/images/chef/topu.png" class="card-img-top" alt="Chef">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1">Topu Gomes</h5>
+              <p class="text-muted">Continental Chef</p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-facebook text-success"></i></a>
+                <a href="#"><i class="bi bi-twitter text-primary"></i></a>
+                <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+              </div>
+            </div>
+            <span class="chef-tag">CHEF</span>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card team-card shadow-sm border-0">
+            <img src="../assets/images/chef/munia.png" class="card-img-top" alt="Chef">
+            <div class="card-body text-center">
+              <h5 class="card-title mb-1">Munia Rahman</h5>
+              <p class="text-muted">Salad Chef</p>
+              <div class="social-links">
+                <a href="#"><i class="bi bi-facebook text-success"></i></a>
+                <a href="#"><i class="bi bi-twitter text-primary"></i></a>
+                <a href="#"><i class="bi bi-youtube text-danger"></i></a>
+              </div>
+            </div>
+            <span class="chef-tag">CHEF</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>

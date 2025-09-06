@@ -14,6 +14,32 @@
 <link rel="icon" type="image/png" href="../assets/images/logo.png" />
 
   <style>
+    .hero {
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+    }
     .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
     .muted{ color:#6c757d }
     .tbl-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap:12px }
@@ -28,6 +54,19 @@
 <body>
 
   <?php include __DIR__ . "/../partials/header-user.html"; ?>
+
+   <!-- Hero Section -->
+   <div class="hero position-relative">
+    <!-- Overlay Content -->
+    <img src="../assets/images/sbg.png" alt="Campus">
+    <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="fw-bold display-5 fst-italic">RESERVATION</h1>
+      <p class="lead fst-italic  ">
+        <a class="nav-link" href="/restaurant-app/index.php">HOME</a>
+      </p>
+      <!-- <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a> -->
+    </div>
+  </div>
 
   <section class="py-5 bg-light">
   <div class="container">

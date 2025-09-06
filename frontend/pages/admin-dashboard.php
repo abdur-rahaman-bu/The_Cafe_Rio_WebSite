@@ -17,6 +17,32 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
   <style>
+    .hero {
+      height: 90vh;
+      width: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 80%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .hero .overlay {
+      background: rgba(0, 0, 0, 0.5);
+      padding: 20px;
+      border-radius: 12px;
+    }
     /* ====== Page Background (Glass Gradient) ====== */
     :root{
       --glass-bg: rgba(255,255,255,.18);
@@ -174,6 +200,18 @@
 </head>
 <body>
   <?php include __DIR__ . "/../partials/header-admin.html"; ?>
+  !-- Hero Section -->
+   <div class="hero position-relative">
+    <!-- Overlay Content -->
+    <img src="../assets/images/sbg.png" alt="Campus">
+    <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
+      <h1 class="fw-bold display-5 fst-italic">OUR DASHBOARD</h1>
+      <p class="lead fst-italic  ">
+        <a class="nav-link" href="/restaurant-app/frontend/pages/admin-dashboard.php">HOME</a>
+      </p>
+      <!-- <a href="#about" class="btn btn-primary btn-lg mt-3">Learn More</a> -->
+    </div>
+  </div>
 
   <section class="section-glass">
     <div class="container">

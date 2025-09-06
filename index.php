@@ -279,6 +279,16 @@
         border-radius: 10px;
         padding: .25rem .5rem
     }
+    .custom-alert {
+    background-color: #ffebcc; /* light orange */
+    color: #663300; /* dark text */
+    border: 1px solid #ffcc80;
+  }
+  .custom-reviews {
+    background-color: #f8f9fa; /* light gray */
+    border-radius: 8px;
+    padding: 15px;
+  }
     </style>
 
     <!-- Schema.org JSON-LD -->
@@ -511,13 +521,19 @@
     <!-- Reviews -->
     <section class="section">
         <div class="container">
-            <div class="d-flex align-items-center justify-content-between mb-2">
+            <div class="d-flex align-items-center justify-content-between mb-2 ">
                 <h2 class="section-title mb-0">What guests say</h2>
                 <a href="/restaurant-app/frontend/pages/my-reservations.php" class="btn btn-outline-secondary btn-sm"><i
                         class="bi bi-journal-text"></i> My reservations</a>
             </div>
-            <div id="revAlert" class="alert d-none" role="alert"></div>
-            <div class="row g-3" id="reviews"></div>
+            <div id="revAlert" class="alert alert-success d-none" role="alert">
+  This is a success message!
+</div>
+
+<div class="row g-3 bg-light p-3 rounded" id="reviews">
+  <p>Review content goes here...</p>
+</div>
+
         </div>
     </section>
 
