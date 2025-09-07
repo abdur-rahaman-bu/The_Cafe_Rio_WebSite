@@ -144,7 +144,7 @@
       </div>
 
       <div class="card-elev">
-  <div class="card-body p-3">
+  <div class="card-body p-3 bg-info-subtle">
     <div class="d-flex align-items-center justify-content-between mb-2">
       <h5 class="fw-bold mb-0">All items</h5>
       <span id="meta" class="small muted">—</span>
