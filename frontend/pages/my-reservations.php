@@ -73,7 +73,7 @@
 
       <!-- User select (if not logged) -->
       <div class="card-elev mb-3" id="userWrap">
-        <div class="card-body p-3 p-md-4">
+        <div class="card-body p-3 p-md-4 ">
           <div class="row g-3 align-items-end">
             <div class="col-md-3">
               <label class="form-label">User ID</label>
@@ -89,7 +89,7 @@
 
       <!-- List -->
       <div class="card-elev">
-        <div class="card-body p-4">
+        <div class="card-body p-4 bg-info">
           <div class="d-flex align-items-center justify-content-between mb-2">
             <h5 class="fw-bold mb-0">All reservations</h5>
           </div>

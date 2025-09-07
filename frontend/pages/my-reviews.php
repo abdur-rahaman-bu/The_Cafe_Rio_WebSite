@@ -73,7 +73,7 @@
 
       <!-- Create review -->
       <div class="card-elev mb-3">
-        <div class="card-body p-3 p-md-4">
+        <div class="card-body p-3 p-md-4 bg-info-subtle">
           <h5 class="fw-bold mb-3">Write a review</h5>
           <div class="row g-2">
             <div class="col-sm-2">
@@ -111,7 +111,7 @@
 
       <!-- My reviews -->
       <div class="card-elev">
-        <div class="card-body p-4">
+        <div class="card-body p-4 bg-info">
           <div class="d-flex align-items-center justify-content-between mb-2">
             <h5 class="fw-bold mb-0">All my reviews</h5>
             <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-arrow-clockwise"></i></button>

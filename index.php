@@ -491,7 +491,7 @@
 
     <!-- Menu Preview -->
     <section class="section" id="menu">
-        <div class="container">
+        <div class="container bg-info-subtle">
             <div class="d-flex align-items-center justify-content-between mb-2">
                 <h2 class="section-title mb-0">Popular this week</h2>
                 <div class="d-flex gap-2 align-items-center">

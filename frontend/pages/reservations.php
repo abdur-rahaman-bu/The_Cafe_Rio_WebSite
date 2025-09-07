@@ -84,7 +84,7 @@
 
     <!-- Reservation Form -->
     <div class="card shadow-lg border-0 mb-4">
-      <div class="card-body p-4">
+      <div class="card-body p-4 bg-info">
         <div id="loginNotice" class="alert alert-warning d-none mb-3" role="alert">
           🔑 লগইন করলে User ID অটো-ফিল হবে। 
           <a id="loginLink" class="alert-link fw-bold text-decoration-underline" href="#">Login</a>
@@ -141,7 +141,7 @@
 
     <!-- Table Grid -->
     <div class="card shadow-lg border-0">
-      <div class="card-body p-4">
+      <div class="card-body p-4 bg-success-subtle">
         <div class="d-flex align-items-center justify-content-between mb-3">
           <h5 class="fw-bold text-dark mb-0">📋 All Tables</h5>
           <button id="btnReload" class="btn btn-outline-info btn-sm shadow-sm" type="button">

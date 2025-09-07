@@ -81,7 +81,7 @@
 
       <!-- Item selector -->
       <div class="card-elev mb-3">
-        <div class="card-body p-3 p-md-4">
+        <div class="card-body p-3 p-md-4 bg-info-subtle">
           <div class="row g-2 align-items-end">
             <div class="col-md-6">
               <label class="form-label">Choose item</label>
@@ -103,7 +103,7 @@
 
       <!-- Aggregate + Submit -->
       <div class="card-elev mb-3">
-        <div class="card-body p-3 p-md-4">
+        <div class="card-body p-3 p-md-4 bg-info-subtle">
           <div class="row g-3">
             <div class="col-md-6">
               <div class="d-flex align-items-center gap-3">

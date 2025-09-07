@@ -129,7 +129,7 @@
           </div>
 
           <div class="card-elev">
-            <div class="card-body p-3">
+            <div class="card-body p-3 bg-info-subtle">
               <div class="d-flex align-items-center justify-content-between mb-2">
                 <h5 class="fw-bold mb-0">Menu</h5>
                 <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-arrow-clockwise"></i></button>
