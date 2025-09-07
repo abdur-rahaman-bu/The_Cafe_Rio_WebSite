@@ -62,7 +62,34 @@
       padding: 20px;
       border-radius: 12px;
     }
-    .card-elev{ border:0; box-shadow:0 10px 25px rgba(0,0,0,.06); border-radius:18px }
+
+    .card-elev {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+  }
+  .card-elev:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+  /* Menu item design */
+  .menu-item {
+    background: #f8f9fa;
+    padding: 15px;
+    text-align: center;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+  }
+
+  /* Menu item hover colourful effect */
+  .menu-item:hover {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    color: #fff;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  }
+    
     .muted{ color:#6c757d }
     .menu-grid{ display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:12px }
     .menu-card{ border:1px solid #eef1f4; border-radius:14px; background:#fff; overflow:hidden; display:flex; flex-direction:column; }
@@ -117,15 +144,22 @@
       </div>
 
       <div class="card-elev">
-        <div class="card-body p-3">
-          <div class="d-flex align-items-center justify-content-between mb-2">
-            <h5 class="fw-bold mb-0">All items</h5>
-            <span id="meta" class="small muted">—</span>
-          </div>
-          <div id="menuAlert" class="alert d-none" role="alert"></div>
-          <div id="grid" class="menu-grid" aria-live="polite" aria-busy="true"></div>
-        </div>
-      </div>
+  <div class="card-body p-3">
+    <div class="d-flex align-items-center justify-content-between mb-2">
+      <h5 class="fw-bold mb-0">All items</h5>
+      <span id="meta" class="small muted">—</span>
+    </div>
+    <div id="menuAlert" class="alert d-none" role="alert"></div>
+
+    <!-- Example grid items -->
+    <div id="grid" class="menu-grid" aria-live="polite" aria-busy="true">
+      <div class="menu-item">🍕 Pizza</div>
+      <div class="menu-item">🍔 Burger</div>
+      <div class="menu-item">🥗 Salad</div>
+      <div class="menu-item">🍣 Sushi</div>
+    </div>
+  </div>
+</div>
     </div>
   </section>
 

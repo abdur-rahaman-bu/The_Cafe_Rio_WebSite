@@ -168,7 +168,7 @@
               <div class="mt-2"><label class="form-label">Notes</label><input id="notes" class="form-control" placeholder="(optional)"></div>
 
               <div class="d-grid mt-3">
-                <button id="btnPlace" class="btn btn-danger"><span id="spPlace" class="spinner-border spinner-border-sm me-2 d-none"></span><i class="bi bi-check2-circle"></i> Place order</button>
+                <button id="btnPlace" class="btn btn-danger"><span id="spPlace" class="spinner-border spinner-border-sm me-2 d-none"></span><i class="bi bi-check2-circle"></i> Order Now</button>
               </div>
             </div>
           </div>

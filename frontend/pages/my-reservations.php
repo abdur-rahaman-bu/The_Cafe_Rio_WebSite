@@ -98,7 +98,7 @@
             <table class="table table-striped align-middle">
               <thead>
                 <tr>
-                  <th>#</th><th class="mono">Resv</th><th>Date</th><th>Time</th><th>Dur</th><th>People</th><th>Type</th><th>Status</th><th style="width:120px">Actions</th>
+                  <th>Serial</th><th class="mono">Resv</th><th>Date</th><th>Time</th><th>Dur</th><th>People</th><th>Type</th><th>Status</th><th style="width:120px">Actions</th>
                 </tr>
               </thead>
               <tbody id="grid"></tbody>
@@ -131,7 +131,7 @@
           <div class="mb-2"><div class="muted">Special request</div><div id="d_note">—</div></div>
           <div class="table-responsive mt-2">
             <table class="table table-sm">
-              <thead><tr><th>#</th><th>Table</th><th>Capacity</th><th>Zone</th><th>From</th><th>To</th></tr></thead>
+              <thead><tr><th>Serial</th><th>Table</th><th>Capacity</th><th>Zone</th><th>From</th><th>To</th></tr></thead>
               <tbody id="d_tables"></tbody>
             </table>
           </div>

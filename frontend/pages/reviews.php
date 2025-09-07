@@ -59,7 +59,7 @@
     <!-- Overlay Content -->
     <img src="../assets/images/sbg.png" alt="Campus">
     <div class="overlay position-absolute top-50 start-50 translate-middle text-center text-white">
-      <h1 class="fw-bold display-5 fst-italic">OUR GUEST REVIEWS</h1>
+      <h1 class="fw-bold display-5 fst-italic">OUR GUESTS REVIEWS</h1>
       <p class="lead fst-italic  ">
         <a class="nav-link" href="/restaurant-app/index.php">HOME</a>
       </p>
@@ -151,7 +151,7 @@
 
       <!-- Reviews list -->
       <div class="card-elev">
-        <div class="card-body p-4">
+        <div class="card-body p-4 bg-info">
           <div class="d-flex align-items-center justify-content-between mb-2">
             <h5 class="fw-bold mb-0">All reviews</h5>
             <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-arrow-clockwise"></i></button>
@@ -161,7 +161,7 @@
             <table class="table table-striped align-middle">
               <thead>
                 <tr>
-                  <th class="mono">#</th>
+                  <th class="mono">Serial</th>
                   <th>User</th>
                   <th>Rating</th>
                   <th>Comment</th>

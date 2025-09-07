@@ -87,7 +87,7 @@
       </div>
 
       <div class="card-elev">
-        <div class="card-body p-4">
+        <div class="card-body p-4 bg-info">
           <div class="d-flex align-items-center justify-content-between mb-2">
             <h5 class="fw-bold mb-0">All orders</h5>
             <button id="btnReload" class="btn btn-outline-secondary btn-sm" type="button"><i class="bi bi-arrow-clockwise"></i></button>
@@ -97,7 +97,7 @@
             <table class="table table-striped align-middle">
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>Serial</th>
                   <th class="mono">Order</th>
                   <th>Total</th>
                   <th>Status</th>
